@@ -569,7 +569,7 @@ class Car implements Vehicle {
 # 
 ---
 
-# 📝 21. IMPORTANT EXAM POINTS
+# 📝 21. IMPORTANT POINTS
 
 * Java has **8 primitive data types**.
 * `byte` uses **1 byte**.
@@ -1055,7 +1055,7 @@ is **Parsing / Conversion**, not primitive type casting.
 ---
 
 # 
-# 🚨 14. IMPORTANT POINTS FOR EXAM
+# 🚨 14. IMPORTANT POINTS 
 
 * **Widening = Small → Large**
 * **Narrowing = Large → Small**
@@ -1516,14 +1516,6 @@ Enter first number: 10
 Enter second number: 20
 Sum = 30
 ```
-
----
-
-
----
-
-
-
 # ⚖️ 19. PRINT VS PRINTLN VS PRINTF
 
 | Method      | Purpose          | New Line?         |
@@ -1532,26 +1524,8 @@ Sum = 30
 | `println()` | Prints output    | ✅ Yes             |
 | `printf()`  | Formatted output | Depends on format |
 
-#
-
-        // ==================================================
-        // 6. SIMPLE CALCULATION USING INPUT
-        // ==================================================
-
-        System.out.print("\nEnter first number: ");
-        int firstNumber = sc.nextInt();
-
-        System.out.print("Enter second number: ");
-        int secondNumber = sc.nextInt();
-
-        int sum = firstNumber + secondNumber;
-
-        System.out.println("Sum = " + sum);
 
 
-        // Close Scanner
-        sc.close();
-    }
-}
+        
 
 
