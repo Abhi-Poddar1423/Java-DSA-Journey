@@ -1,5 +1,4 @@
-package CO2_Conditionals;
-import java.sql.SQLOutput;
+package CO2_ConditionalStatements;
 import java.util.Scanner;
 public class CO2_GreaterFourNumber {
    public  static void main(String[] args) {

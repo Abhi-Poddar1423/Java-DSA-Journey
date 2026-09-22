@@ -1,5 +1,4 @@
-package CO2_Conditionals;
-import jdk.swing.interop.SwingInterOpUtils;
+package CO2_ConditionalStatements;
 
 import java.util.Scanner;
 public class CO2_CalculatorUsingSwitch {

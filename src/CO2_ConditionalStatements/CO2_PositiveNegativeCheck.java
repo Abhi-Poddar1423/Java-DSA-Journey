@@ -1,4 +1,4 @@
-package CO2_Conditionals;
+package CO2_ConditionalStatements;
 import java.util.Scanner;
 public class CO2_PositiveNegativeCheck {
    public  static void main(String[] args) {
