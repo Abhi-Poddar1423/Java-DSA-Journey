@@ -1,0 +1,18 @@
+package CO2_Conditionals;
+
+import java.util.Scanner;
+public class CO2_CheckInteger {
+    public static void main(String[] args){
+        Scanner sc = new Scanner(System.in);
+
+        System.out.println("Enter a integer:");
+       double number = sc.nextDouble();
+
+        if (number % 1 == 0){
+            System.out.println((int)number + " ais a integer");
+        }
+        else {
+            System.out.println(number + " it is not a Integer");
+        }
+    }
+}
