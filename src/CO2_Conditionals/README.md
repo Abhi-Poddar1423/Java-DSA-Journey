@@ -1,4 +1,4 @@
-# 🚦 CO2 — CONDITIONAL STATEMENTS IN JAVA
+# 🚦 CO1.5 — CONDITIONAL STATEMENTS IN JAVA
 
 > **Condition → Decision → Action**
 
@@ -8,15 +8,18 @@ Conditional statements are used to make decisions in a Java program based on con
 
 # 📌 1. What are Conditional Statements?
 
-Conditional statements allow a program to execute different code depending on whether a condition is **true** or **false**.
+A conditional statement allows a program to execute different code depending on whether a condition is **true** or **false**.
 
 ### 🌍 Real-Life Example
 
 ```text
 If it is raining
-    → Take an umbrella
+    ↓
+Take an umbrella
+
 Otherwise
-    → Don't take an umbrella
+    ↓
+Don't take an umbrella
 ```
 
 ---
@@ -26,8 +29,8 @@ Otherwise
 | Statement    | Purpose                               |
 | ------------ | ------------------------------------- |
 | `if`         | Execute code when a condition is true |
-| `if-else`    | Choose between two conditions         |
-| `if-else-if` | Handle multiple conditions            |
+| `if-else`    | Choose between two possibilities      |
+| `if-else-if` | Check multiple conditions             |
 | Nested `if`  | `if` inside another `if`              |
 | `switch`     | Handle multiple fixed choices         |
 | Ternary `?:` | Short form of `if-else`               |
@@ -36,7 +39,7 @@ Otherwise
 
 # 🟢 3. if Statement
 
-Used when code should execute only if a condition is true.
+The `if` statement executes a block of code only when the condition is true.
 
 ### Syntax
 
@@ -46,7 +49,7 @@ if (condition) {
 }
 ```
 
-### Example
+### Example — Check Positive Number
 
 ```java
 int number = 10;
@@ -56,9 +59,28 @@ if (number > 0) {
 }
 ```
 
-**Output:**
+### Output
 
 ```text
+Positive Number
+```
+
+### Explanation
+
+* `number = 10` stores `10` in the variable.
+* `number > 0` checks whether the number is greater than `0`.
+* `10 > 0` is `true`.
+* Therefore, the code inside `if` executes.
+
+### Logic
+
+```text
+number = 10
+     ↓
+number > 0 ?
+     ↓
+   true
+     ↓
 Positive Number
 ```
 
@@ -66,7 +88,7 @@ Positive Number
 
 # 🟡 4. if-else Statement
 
-Used when there are two possible outcomes.
+`if-else` is used when there are two possible outcomes.
 
 ### Syntax
 
@@ -78,7 +100,7 @@ if (condition) {
 }
 ```
 
-### Example — Even or Odd
+### Example — Check Even or Odd
 
 ```java
 int number = 7;
@@ -90,10 +112,32 @@ if (number % 2 == 0) {
 }
 ```
 
-**Output:**
+### Output
 
 ```text
 Odd
+```
+
+### Explanation
+
+* `number = 7`
+* `%` operator gives the remainder.
+* `7 % 2 = 1`
+* Condition `1 == 0` is `false`.
+* Therefore, the `else` block executes.
+* Output is `Odd`.
+
+### Logic
+
+```text
+number
+   ↓
+number % 2 == 0 ?
+   ↓
+ ┌───────┴───────┐
+Yes              No
+ ↓                ↓
+Even             Odd
 ```
 
 ---
@@ -114,7 +158,7 @@ if (condition1) {
 }
 ```
 
-### Example — Grade
+### Example — Grade Check
 
 ```java
 int marks = 85;
@@ -130,19 +174,35 @@ if (marks >= 90) {
 }
 ```
 
-**Output:**
+### Output
 
 ```text
 Grade A
 ```
 
-> Java checks conditions from **top to bottom** and executes the first true condition.
+### Explanation
+
+* `marks = 85`
+* First condition: `85 >= 90` → `false`
+* Second condition: `85 >= 80` → `true`
+* Therefore, `Grade A` is printed.
+* Once a condition becomes true, remaining conditions are skipped.
+
+### Logic
+
+```text
+85 >= 90 ?
+    ↓ No
+85 >= 80 ?
+    ↓ Yes
+Grade A
+```
 
 ---
 
 # 🟣 6. Nested if
 
-An `if` statement inside another `if` statement is called a **nested if**.
+An `if` statement inside another `if` statement is called a **Nested if**.
 
 ### Syntax
 
@@ -155,7 +215,7 @@ if (condition1) {
 }
 ```
 
-### Example
+### Example — Login Check
 
 ```java
 boolean usernameCorrect = true;
@@ -169,9 +229,31 @@ if (usernameCorrect) {
 }
 ```
 
-**Output:**
+### Output
 
 ```text
+Login Successful
+```
+
+### Explanation
+
+* `usernameCorrect = true` means the username is correct.
+* First `if` checks the username.
+* If username is correct, the second `if` checks the password.
+* `passwordCorrect = true`, so the second condition is also true.
+* Therefore, `Login Successful` is printed.
+
+### Logic
+
+```text
+Username correct?
+       ↓
+      Yes
+       ↓
+Password correct?
+       ↓
+      Yes
+       ↓
 Login Successful
 ```
 
@@ -179,7 +261,7 @@ Login Successful
 
 # ⚙️ 7. Comparison Operators
 
-Comparison operators are commonly used inside conditions.
+Comparison operators are commonly used in conditions.
 
 | Operator | Meaning               |
 | -------- | --------------------- |
@@ -199,35 +281,51 @@ int b = 20;
 System.out.println(a < b);
 ```
 
-**Output:**
+### Output
 
 ```text
 true
 ```
 
+### Explanation
+
+`a < b` means:
+
+```text
+Is 10 less than 20?
+```
+
+Yes, so the result is `true`.
+
 ---
 
 # ⚠️ 8. `=` vs `==`
 
-### `=`
+This is an important beginner concept.
 
-Assignment operator.
+### `=` Assignment Operator
 
 ```java
 int number = 10;
 ```
 
-Means: **Assign 10 to number.**
+It assigns `10` to `number`.
 
-### `==`
+```text
+number ← 10
+```
 
-Comparison operator.
+### `==` Comparison Operator
 
 ```java
 if (number == 10)
 ```
 
-Means: **Check whether number is equal to 10.**
+It checks whether `number` is equal to `10`.
+
+```text
+Is number equal to 10?
+```
 
 ### Remember
 
@@ -248,9 +346,13 @@ Logical operators are used to combine conditions.
 | `        |         | ` | OR |
 | `!`      | NOT     |   |    |
 
-### AND `&&`
+---
+
+## 9.1 AND Operator `&&`
 
 Both conditions must be true.
+
+### Example
 
 ```java
 int age = 22;
@@ -260,9 +362,28 @@ if (age >= 18 && age <= 60) {
 }
 ```
 
-### OR `||`
+### Explanation
+
+```text
+age >= 18 → true
+age <= 60 → true
+
+true && true → true
+```
+
+Therefore:
+
+```text
+Age is valid
+```
+
+---
+
+## 9.2 OR Operator `||`
 
 At least one condition must be true.
+
+### Example
 
 ```java
 int day = 7;
@@ -272,9 +393,28 @@ if (day == 6 || day == 7) {
 }
 ```
 
-### NOT `!`
+### Explanation
 
-Reverses the result.
+```text
+day == 6 → false
+day == 7 → true
+
+false || true → true
+```
+
+Therefore:
+
+```text
+Weekend
+```
+
+---
+
+## 9.3 NOT Operator `!`
+
+The `!` operator reverses the result.
+
+### Example
 
 ```java
 boolean rain = false;
@@ -282,6 +422,26 @@ boolean rain = false;
 if (!rain) {
     System.out.println("No Rain");
 }
+```
+
+### Explanation
+
+```text
+rain = false
+!rain = true
+```
+
+Therefore:
+
+```text
+No Rain
+```
+
+### Remember
+
+```text
+!true  → false
+!false → true
 ```
 
 ---
@@ -308,7 +468,7 @@ switch (value) {
 }
 ```
 
-### Example — Day
+### Example — Day Check
 
 ```java
 int day = 2;
@@ -332,15 +492,33 @@ switch (day) {
 }
 ```
 
-**Output:**
+### Output
 
 ```text
 Tuesday
 ```
 
-### `break`
+### Explanation
 
-`break` stops the execution of the `switch` after the matching case.
+* `day = 2`
+* `switch` compares the value with each `case`.
+* `case 1` → No match.
+* `case 2` → Match found.
+* Therefore, `Tuesday` is printed.
+* `break` stops the switch after the matching case.
+
+### Logic
+
+```text
+day = 2
+   ↓
+case 1 → No
+case 2 → Yes
+   ↓
+Tuesday
+   ↓
+break
+```
 
 ---
 
@@ -354,7 +532,7 @@ The ternary operator is a short form of `if-else`.
 condition ? trueValue : falseValue;
 ```
 
-### Example
+### Example — Even or Odd
 
 ```java
 int number = 8;
@@ -364,16 +542,44 @@ String result = (number % 2 == 0) ? "Even" : "Odd";
 System.out.println(result);
 ```
 
-**Output:**
+### Output
 
 ```text
 Even
 ```
 
-### Formula
+### Explanation
+
+First, the condition is checked:
 
 ```text
-condition ? valueIfTrue : valueIfFalse
+8 % 2 == 0
+```
+
+```text
+8 % 2 = 0
+```
+
+So the condition is `true`.
+
+Therefore:
+
+```text
+true  → "Even"
+false → "Odd"
+```
+
+`result` stores `"Even"`.
+
+### Logic
+
+```text
+number % 2 == 0 ?
+       ↓
+ ┌─────┴─────┐
+True        False
+ ↓             ↓
+Even          Odd
 ```
 
 ---
@@ -393,7 +599,7 @@ condition ? valueIfTrue : valueIfFalse
 
 # 🧪 13. Practice Problems
 
-### Beginner
+## Beginner
 
 1. Check positive or negative
 2. Check even or odd
@@ -402,7 +608,7 @@ condition ? valueIfTrue : valueIfFalse
 5. Check pass or fail
 6. Check voting eligibility
 
-### Intermediate
+## Intermediate
 
 7. Greatest of two numbers
 8. Greatest of three numbers
@@ -414,7 +620,7 @@ condition ? valueIfTrue : valueIfFalse
 14. Calculate grade
 15. Calculate electricity bill
 
-### Switch
+## Switch
 
 16. Day of week
 17. Month number
@@ -422,7 +628,7 @@ condition ? valueIfTrue : valueIfFalse
 19. Menu-based program
 20. Number to word
 
-### Ternary
+## Ternary
 
 21. Even or odd
 22. Positive or negative
