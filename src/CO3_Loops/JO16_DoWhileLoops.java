@@ -1,6 +1,6 @@
 package CO3_Loops;
 
-public class CO3_DoWhileLoops {
+public class JO16_DoWhileLoops {
         public static void main(String args[]) {
             int i = 1;
             do {

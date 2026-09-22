@@ -1,6 +1,6 @@
 package CO2_ConditionalStatements;
 import java.util.Scanner;
-public class CO2_TraficLight {
+public class JO7_TraficLight {
 
     public static void main(String[] args) {
 

@@ -1,6 +1,6 @@
 package CO3_Loops;
 
-public class CO3_ASCIIValue {
+public class JO9_ASCIIValue {
     public static void main(String[] args){
         // Loop from A to Z
         for(char ch = 'A'; ch <= 'Z'; ch++){

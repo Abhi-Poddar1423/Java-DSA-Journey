@@ -1,7 +1,7 @@
 package CO3_Loops;
 import java.util.Scanner;
 
-public class CO3_PalindromeNumber {
+public class JO12_PalindromeNumber {
 
 
 

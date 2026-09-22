@@ -1,6 +1,6 @@
 package CO2_ConditionalStatements;
 import java.util.Scanner;
-public class CO2_TriangleExistance {
+public class JO8_TriangleExistance {
     /*
               TRIANGLE EXISTENCE
 

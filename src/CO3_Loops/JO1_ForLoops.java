@@ -1,6 +1,6 @@
 package CO3_Loops;
 import java.util.Scanner;
-public class CO3_ForLoops {
+public class JO1_ForLoops {
     public static void main(String[] args){
 
         Scanner sc = new Scanner(System.in);

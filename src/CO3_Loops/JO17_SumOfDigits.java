@@ -1,6 +1,6 @@
 package CO3_Loops;
 import java.util.Scanner;
-public class CO3_SumOfDigits {
+public class JO17_SumOfDigits {
 
         public static void main(String[] args) {
 

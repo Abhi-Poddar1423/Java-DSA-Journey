@@ -1,6 +1,6 @@
 package CO3_Loops;
 
-public class CO3_InfiniteLoops {
+public class JO13_InfiniteLoops {
         public static void main(String[] args) {
 
             // true is always true

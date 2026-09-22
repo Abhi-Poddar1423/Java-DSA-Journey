@@ -1,6 +1,6 @@
 package CO2_ConditionalStatements;
 import java.util.Scanner;
-public class CO2_CheckVowelConsonant {
+public class JO6_CheckVowelConsonant {
     public static void main(String[] args){
 
         Scanner sc = new Scanner(System.in);

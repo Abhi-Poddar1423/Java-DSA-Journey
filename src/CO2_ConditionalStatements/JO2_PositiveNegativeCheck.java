@@ -1,6 +1,6 @@
 package CO2_ConditionalStatements;
 import java.util.Scanner;
-public class CO2_PositiveNegativeCheck {
+public class JO2_PositiveNegativeCheck {
    public  static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
 

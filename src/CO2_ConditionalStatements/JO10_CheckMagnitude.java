@@ -1,7 +1,7 @@
 package CO2_ConditionalStatements;
 
 import java.util.Scanner;
-public class CO2_CheckMagnitude {
+public class JO10_CheckMagnitude {
     /*
                  CHECK MAGNITUDE IN JAVA
 

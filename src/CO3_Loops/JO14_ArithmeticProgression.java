@@ -1,6 +1,6 @@
 package CO3_Loops;
 import java.util.Scanner;
-public class CO3_ArithmeticProgression {
+public class JO14_ArithmeticProgression {
 
         public static void main(String[] args) {
 

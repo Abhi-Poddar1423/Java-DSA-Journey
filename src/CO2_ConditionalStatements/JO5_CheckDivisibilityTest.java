@@ -1,6 +1,6 @@
 package CO2_ConditionalStatements;
 import java.util.Scanner;
-public class CO2_CheckDivisibilityTest {
+public class JO5_CheckDivisibilityTest {
     public static void main(String[] args){
 
         Scanner sc = new Scanner(System.in);

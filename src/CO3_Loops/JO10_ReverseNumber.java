@@ -1,7 +1,7 @@
 package CO3_Loops;
 import java.util.Scanner;
 
-public class CO3_ReverseNumber {
+public class JO10_ReverseNumber {
     public static void main(String[] args){
 
         Scanner sc = new Scanner(System.in);

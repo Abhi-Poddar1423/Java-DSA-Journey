@@ -1,7 +1,7 @@
 package CO2_ConditionalStatements;
 
 import java.util.Scanner;
-public class CO2_CheckInteger {
+public class JO3_CheckInteger {
     public static void main(String[] args){
         Scanner sc = new Scanner(System.in);
 

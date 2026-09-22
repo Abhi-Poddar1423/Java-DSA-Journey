@@ -1,6 +1,6 @@
 package CO2_ConditionalStatements;
 import java.util.Scanner;
-public class CO2_TernaryOperator {
+public class JO12_TernaryOperator {
      /*
 Ternary Operator:
 

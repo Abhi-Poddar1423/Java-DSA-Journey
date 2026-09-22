@@ -1,6 +1,6 @@
 package CO3_Loops;
 import java.util.Scanner;
-public class CO3_CompositeNumber {
+public class JO7_CompositeNumber {
 
         public static void main(String[] args) {
 

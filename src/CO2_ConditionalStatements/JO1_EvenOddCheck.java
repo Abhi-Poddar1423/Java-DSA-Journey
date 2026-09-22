@@ -1,6 +1,6 @@
 package CO2_ConditionalStatements;
 import java.util.Scanner;
-public class CO2_EvenOddCheck {
+public class JO1_EvenOddCheck {
     public static void main(String[] args){
         Scanner sc = new Scanner(System.in);
 

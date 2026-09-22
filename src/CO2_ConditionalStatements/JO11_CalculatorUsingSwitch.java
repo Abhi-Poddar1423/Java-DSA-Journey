@@ -1,7 +1,7 @@
 package CO2_ConditionalStatements;
 
 import java.util.Scanner;
-public class CO2_CalculatorUsingSwitch {
+public class JO11_CalculatorUsingSwitch {
     public static void main(String[] args){
 
         Scanner sc = new Scanner(System.in);

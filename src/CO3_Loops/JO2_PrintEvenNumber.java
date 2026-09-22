@@ -1,6 +1,6 @@
 package CO3_Loops;
 import java.util.Scanner;
-public class CO3_PrintEvenNumber {
+public class JO2_PrintEvenNumber {
     public static void main(String[] args){
         Scanner sc = new Scanner(System.in);
 
