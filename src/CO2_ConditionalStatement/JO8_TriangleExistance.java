@@ -1,4 +1,4 @@
-package CO2_ConditionalStatements;
+package CO2_ConditionalStatement;
 import java.util.Scanner;
 public class JO8_TriangleExistance {
     /*
