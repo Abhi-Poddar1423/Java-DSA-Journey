@@ -1,4 +1,4 @@
-# 🚦 CO1.5 — CONDITIONAL STATEMENTS IN JAVA
+# 🚦 CO2 — CONDITIONAL STATEMENTS IN JAVA
 
 > **Condition → Decision → Action**
 
