@@ -1,6 +1,6 @@
 package CO3_Loops;
 import java.util.Scanner;
-public class JO15_ArmstrongNumber {
+public class JO14_ArmstrongNumber {
 
 //    Armstrong Number ⭐
 //    Definition
