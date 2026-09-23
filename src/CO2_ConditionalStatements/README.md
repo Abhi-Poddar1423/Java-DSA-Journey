@@ -1,210 +1,391 @@
-# 🚦 CO2 — CONDITIONAL STATEMENTS IN JAVA
+# ☕ CO1.5 — CONDITIONAL STATEMENTS IN JAVA
 
-> **Condition → Decision → Action**
-
-Conditional statements are used to make decisions in a Java program based on conditions.
+> **Condition → Check → Make a Decision → Execute Code**
 
 ---
 
-# 📌 1. What are Conditional Statements?
+# 📚 1. WHAT IS A CONDITIONAL STATEMENT?
 
-A conditional statement allows a program to execute different code depending on whether a condition is **true** or **false**.
+A **conditional statement** is used to make decisions in a Java program.
+
+In simple words:
+
+> **A conditional statement checks a condition and decides which code should run.**
 
 ### 🌍 Real-Life Example
 
+Imagine you are checking your exam result:
+
 ```text
-If it is raining
+If marks >= 40
     ↓
-Take an umbrella
+You Passed
 
 Otherwise
     ↓
-Don't take an umbrella
+You Failed
+```
+
+Java can make the same type of decision.
+
+---
+
+# 🎯 2. WHY DO WE USE CONDITIONAL STATEMENTS?
+
+Programs often need to make decisions.
+
+For example:
+
+```text
+Check age
+Check marks
+Check balance
+Check password
+Check temperature
+Choose a menu option
+```
+
+### 🌍 Real-Life Examples
+
+```text
+ATM
+→ If balance is sufficient → Allow withdrawal
+
+College
+→ If attendance >= 75% → Allow exam
+
+Online Shopping
+→ If amount >= ₹500 → Free delivery
+
+Login
+→ If password is correct → Allow login
+```
+
+So, conditional statements help a program **behave differently according to different situations**.
+
+---
+
+# 🧩 3. TYPES OF CONDITIONAL STATEMENTS
+
+Java provides different ways to make decisions:
+
+```text
+             CONDITIONAL STATEMENTS
+                       │
+        ┌──────────────┼──────────────┐
+        ↓              ↓              ↓
+       if           if-else        else-if
+        │
+        ↓
+    Nested if
+        │
+        ↓
+     switch
+```
+
+We will learn:
+
+```text
+1. if
+2. if-else
+3. else-if
+4. Nested if
+5. switch
 ```
 
 ---
 
-# 📚 2. Types of Conditional Statements
+# 🟢 4. `if` STATEMENT
 
-| Statement    | Purpose                               |
-| ------------ | ------------------------------------- |
-| `if`         | Execute code when a condition is true |
-| `if-else`    | Choose between two possibilities      |
-| `if-else-if` | Check multiple conditions             |
-| Nested `if`  | `if` inside another `if`              |
-| `switch`     | Handle multiple fixed choices         |
-| Ternary `?:` | Short form of `if-else`               |
+## What is `if`?
+
+The `if` statement executes a block of code **only when the condition is true**.
+
+### Why do we use it?
+
+We use `if` when we want to perform an action only if something is true.
 
 ---
 
-# 🟢 3. if Statement
+## 🌍 Real-Life Example
 
-The `if` statement executes a block of code only when the condition is true.
+Suppose an ATM checks your balance.
 
-### Syntax
+```text
+If balance is enough
+        ↓
+Allow withdrawal
+```
+
+---
+
+## 📌 Syntax
 
 ```java
 if (condition) {
-    // code
+    // code to execute
 }
-```
-
-### Example — Check Positive Number
-
-```java
-int number = 10;
-
-if (number > 0) {
-    System.out.println("Positive Number");
-}
-```
-
-### Output
-
-```text
-Positive Number
-```
-
-### Explanation
-
-* `number = 10` stores `10` in the variable.
-* `number > 0` checks whether the number is greater than `0`.
-* `10 > 0` is `true`.
-* Therefore, the code inside `if` executes.
-
-### Logic
-
-```text
-number = 10
-     ↓
-number > 0 ?
-     ↓
-   true
-     ↓
-Positive Number
 ```
 
 ---
 
-# 🟡 4. if-else Statement
+## 💻 Small Program
 
-`if-else` is used when there are two possible outcomes.
+```java
+int balance = 5000;
+int withdrawal = 2000;
 
-### Syntax
+if (balance >= withdrawal) {
+    System.out.println("Withdrawal successful.");
+}
+```
+
+### 📤 Output
+
+```text
+Withdrawal successful.
+```
+
+### 🧠 How does it work?
+
+```text
+balance = 5000
+withdrawal = 2000
+
+5000 >= 2000 ?
+       ↓
+      true
+       ↓
+Execute if block
+       ↓
+Withdrawal successful.
+```
+
+Because the condition is `true`, Java executes the code inside `if`.
+
+---
+
+# 🟡 5. `if-else` STATEMENT
+
+## What is `if-else`?
+
+`if-else` is used when there are **two possible outcomes**.
+
+```text
+If condition is true
+        ↓
+     Do this
+
+Otherwise
+        ↓
+     Do that
+```
+
+### Why do we use it?
+
+We use `if-else` when we need to choose between **two options**.
+
+---
+
+## 🌍 Real-Life Example
+
+Checking whether a student passed:
+
+```text
+If marks >= 40
+      ↓
+   Passed
+
+Otherwise
+      ↓
+   Failed
+```
+
+---
+
+## 📌 Syntax
 
 ```java
 if (condition) {
-    // true
+    // code if condition is true
 } else {
-    // false
+    // code if condition is false
 }
-```
-
-### Example — Check Even or Odd
-
-```java
-int number = 7;
-
-if (number % 2 == 0) {
-    System.out.println("Even");
-} else {
-    System.out.println("Odd");
-}
-```
-
-### Output
-
-```text
-Odd
-```
-
-### Explanation
-
-* `number = 7`
-* `%` operator gives the remainder.
-* `7 % 2 = 1`
-* Condition `1 == 0` is `false`.
-* Therefore, the `else` block executes.
-* Output is `Odd`.
-
-### Logic
-
-```text
-number
-   ↓
-number % 2 == 0 ?
-   ↓
- ┌───────┴───────┐
-Yes              No
- ↓                ↓
-Even             Odd
 ```
 
 ---
 
-# 🔵 5. if-else-if Statement
+## 💻 Small Program
 
-Used when multiple conditions need to be checked.
+```java
+int marks = 35;
 
-### Syntax
+if (marks >= 40) {
+    System.out.println("Passed");
+} else {
+    System.out.println("Failed");
+}
+```
+
+### 📤 Output
+
+```text
+Failed
+```
+
+### 🧠 How does it work?
+
+```text
+marks = 35
+
+35 >= 40 ?
+     ↓
+   false
+     ↓
+Execute else block
+     ↓
+Failed
+```
+
+Since the condition is false, Java executes the `else` block.
+
+---
+
+# 🟠 6. `else-if` STATEMENT
+
+## What is `else-if`?
+
+`else-if` is used when we have **multiple conditions**.
+
+### Why do we use it?
+
+Suppose we want to give different grades according to marks.
+
+There are more than two possibilities:
+
+```text
+90+ → A
+80+ → B
+70+ → C
+60+ → D
+Below 60 → F
+```
+
+For this type of decision, we can use `else-if`.
+
+---
+
+## 🌍 Real-Life Example
+
+A college grading system:
+
+```text
+Marks >= 90 → Grade A
+Marks >= 80 → Grade B
+Marks >= 70 → Grade C
+Marks >= 60 → Grade D
+Otherwise   → Grade F
+```
+
+---
+
+## 📌 Syntax
 
 ```java
 if (condition1) {
 
 } else if (condition2) {
 
+} else if (condition3) {
+
 } else {
 
 }
 ```
 
-### Example — Grade Check
+---
+
+## 💻 Small Program
 
 ```java
 int marks = 85;
 
 if (marks >= 90) {
-    System.out.println("Grade A+");
-} else if (marks >= 80) {
     System.out.println("Grade A");
-} else if (marks >= 70) {
+} else if (marks >= 80) {
     System.out.println("Grade B");
+} else if (marks >= 70) {
+    System.out.println("Grade C");
+} else if (marks >= 60) {
+    System.out.println("Grade D");
 } else {
-    System.out.println("Need Improvement");
+    System.out.println("Grade F");
 }
 ```
 
-### Output
+### 📤 Output
 
 ```text
-Grade A
+Grade B
 ```
 
-### Explanation
+### 🧠 How does it work?
 
-* `marks = 85`
-* First condition: `85 >= 90` → `false`
-* Second condition: `85 >= 80` → `true`
-* Therefore, `Grade A` is printed.
-* Once a condition becomes true, remaining conditions are skipped.
-
-### Logic
+Java checks the conditions from **top to bottom**.
 
 ```text
-85 >= 90 ?
-    ↓ No
-85 >= 80 ?
-    ↓ Yes
-Grade A
+marks = 85
+
+85 >= 90 ? → false
+
+85 >= 80 ? → true
+              ↓
+          Grade B
+```
+
+Once Java finds a `true` condition, it executes that block and skips the remaining conditions.
+
+---
+
+# 🔵 7. NESTED `if`
+
+## What is Nested `if`?
+
+A **nested if** means using an `if` statement inside another `if` statement.
+
+```text
+if
+ ↓
+   if
+    ↓
+   code
+```
+
+### Why do we use it?
+
+We use nested `if` when the second condition should be checked **only after the first condition is true**.
+
+---
+
+## 🌍 Real-Life Example
+
+Suppose a college checks whether a student can appear in an exam:
+
+```text
+Is the student registered?
+        ↓
+      Yes
+        ↓
+Is attendance >= 75%?
+        ↓
+      Yes
+        ↓
+Allow exam
 ```
 
 ---
 
-# 🟣 6. Nested if
-
-An `if` statement inside another `if` statement is called a **Nested if**.
-
-### Syntax
+## 📌 Syntax
 
 ```java
 if (condition1) {
@@ -212,245 +393,85 @@ if (condition1) {
     if (condition2) {
         // code
     }
+
 }
 ```
 
-### Example — Login Check
+---
+
+## 💻 Small Program
 
 ```java
-boolean usernameCorrect = true;
-boolean passwordCorrect = true;
+boolean registered = true;
+int attendance = 80;
 
-if (usernameCorrect) {
+if (registered) {
 
-    if (passwordCorrect) {
-        System.out.println("Login Successful");
+    if (attendance >= 75) {
+        System.out.println("You can appear in the exam.");
     }
+
 }
 ```
 
-### Output
+### 📤 Output
 
 ```text
-Login Successful
+You can appear in the exam.
 ```
 
-### Explanation
+### 🧠 How does it work?
 
-* `usernameCorrect = true` means the username is correct.
-* First `if` checks the username.
-* If username is correct, the second `if` checks the password.
-* `passwordCorrect = true`, so the second condition is also true.
-* Therefore, `Login Successful` is printed.
-
-### Logic
+First Java checks:
 
 ```text
-Username correct?
-       ↓
-      Yes
-       ↓
-Password correct?
-       ↓
-      Yes
-       ↓
-Login Successful
+registered == true ?
+        ↓
+      true
+        ↓
+Check second condition
+        ↓
+attendance >= 75 ?
+        ↓
+      true
+        ↓
+Allow exam
 ```
+
+The second `if` is checked only because the first condition was true.
 
 ---
 
-# ⚙️ 7. Comparison Operators
+# 🟣 8. `switch` STATEMENT
 
-Comparison operators are commonly used in conditions.
+## What is `switch`?
 
-| Operator | Meaning               |
-| -------- | --------------------- |
-| `>`      | Greater than          |
-| `<`      | Less than             |
-| `>=`     | Greater than or equal |
-| `<=`     | Less than or equal    |
-| `==`     | Equal to              |
-| `!=`     | Not equal to          |
+`switch` is used when we want to choose **one option from multiple fixed choices**.
 
-### Example
+### Why do we use it?
 
-```java
-int a = 10;
-int b = 20;
-
-System.out.println(a < b);
-```
-
-### Output
-
-```text
-true
-```
-
-### Explanation
-
-`a < b` means:
-
-```text
-Is 10 less than 20?
-```
-
-Yes, so the result is `true`.
+It is useful when one value can have different fixed options.
 
 ---
 
-# ⚠️ 8. `=` vs `==`
+## 🌍 Real-Life Example
 
-This is an important beginner concept.
-
-### `=` Assignment Operator
-
-```java
-int number = 10;
-```
-
-It assigns `10` to `number`.
+Imagine a food-ordering system:
 
 ```text
-number ← 10
+1 → Pizza
+2 → Burger
+3 → Sandwich
+4 → Pasta
 ```
 
-### `==` Comparison Operator
+The user chooses a number, and the program performs the corresponding action.
 
-```java
-if (number == 10)
-```
-
-It checks whether `number` is equal to `10`.
-
-```text
-Is number equal to 10?
-```
-
-### Remember
-
-```text
-=   → Assign
-==  → Compare
-```
+This can be handled using `switch`.
 
 ---
 
-# 🔗 9. Logical Operators
-
-Logical operators are used to combine conditions.
-
-| Operator | Meaning |   |    |
-| -------- | ------- | - | -- |
-| `&&`     | AND     |   |    |
-| `        |         | ` | OR |
-| `!`      | NOT     |   |    |
-
----
-
-## 9.1 AND Operator `&&`
-
-Both conditions must be true.
-
-### Example
-
-```java
-int age = 22;
-
-if (age >= 18 && age <= 60) {
-    System.out.println("Age is valid");
-}
-```
-
-### Explanation
-
-```text
-age >= 18 → true
-age <= 60 → true
-
-true && true → true
-```
-
-Therefore:
-
-```text
-Age is valid
-```
-
----
-
-## 9.2 OR Operator `||`
-
-At least one condition must be true.
-
-### Example
-
-```java
-int day = 7;
-
-if (day == 6 || day == 7) {
-    System.out.println("Weekend");
-}
-```
-
-### Explanation
-
-```text
-day == 6 → false
-day == 7 → true
-
-false || true → true
-```
-
-Therefore:
-
-```text
-Weekend
-```
-
----
-
-## 9.3 NOT Operator `!`
-
-The `!` operator reverses the result.
-
-### Example
-
-```java
-boolean rain = false;
-
-if (!rain) {
-    System.out.println("No Rain");
-}
-```
-
-### Explanation
-
-```text
-rain = false
-!rain = true
-```
-
-Therefore:
-
-```text
-No Rain
-```
-
-### Remember
-
-```text
-!true  → false
-!false → true
-```
-
----
-
-# 🟢 10. switch Statement
-
-`switch` is useful when there are multiple **fixed choices**.
-
-### Syntax
+## 📌 Syntax
 
 ```java
 switch (value) {
@@ -468,78 +489,348 @@ switch (value) {
 }
 ```
 
-### Example — Day Check
+---
+
+## 💻 Small Program
 
 ```java
-int day = 2;
+int choice = 2;
 
-switch (day) {
+switch (choice) {
 
     case 1:
-        System.out.println("Monday");
+        System.out.println("Pizza");
         break;
 
     case 2:
-        System.out.println("Tuesday");
+        System.out.println("Burger");
         break;
 
     case 3:
-        System.out.println("Wednesday");
+        System.out.println("Sandwich");
+        break;
+
+    case 4:
+        System.out.println("Pasta");
         break;
 
     default:
-        System.out.println("Invalid Day");
+        System.out.println("Invalid choice");
+}
+```
+
+### 📤 Output
+
+```text
+Burger
+```
+
+### 🧠 How does it work?
+
+```text
+choice = 2
+
+       ↓
+   switch(2)
+       ↓
+case 1 → No
+       ↓
+case 2 → Yes
+       ↓
+    Burger
+       ↓
+     break
+```
+
+Java finds the matching `case` and executes its code.
+
+---
+
+# 🛑 9. `break` IN `switch`
+
+## What is `break`?
+
+`break` tells Java to **stop the switch statement**.
+
+### Example
+
+```java
+case 1:
+    System.out.println("Pizza");
+    break;
+```
+
+After executing this case, Java leaves the `switch`.
+
+### Simple idea
+
+```text
+case matches
+     ↓
+execute code
+     ↓
+break
+     ↓
+exit switch
+```
+
+---
+
+# ⚪ 10. `default` IN `switch`
+
+## What is `default`?
+
+`default` runs when **none of the cases match**.
+
+### 🌍 Real-Life Example
+
+If a food menu has options 1–4 and the user enters 7:
+
+```text
+1 → Pizza
+2 → Burger
+3 → Sandwich
+4 → Pasta
+7 → Invalid choice
+```
+
+### 💻 Program
+
+```java
+int choice = 7;
+
+switch (choice) {
+
+    case 1:
+        System.out.println("Pizza");
+        break;
+
+    case 2:
+        System.out.println("Burger");
+        break;
+
+    case 3:
+        System.out.println("Sandwich");
+        break;
+
+    default:
+        System.out.println("Invalid choice");
+}
+```
+
+### 📤 Output
+
+```text
+Invalid choice
+```
+
+---
+
+# 🔗 11. CONDITIONS WITH RELATIONAL OPERATORS
+
+Conditional statements commonly use relational operators.
+
+```text
+==    Equal to
+!=    Not equal to
+>     Greater than
+<     Less than
+>=    Greater than or equal to
+<=    Less than or equal to
+```
+
+### 💻 Example
+
+```java
+int age = 20;
+
+if (age >= 18) {
+    System.out.println("Eligible");
+}
+```
+
+### 🧠 How it works
+
+```text
+age = 20
+
+20 >= 18
+   ↓
+ true
+   ↓
+Eligible
+```
+
+---
+
+# 🔗 12. CONDITIONS WITH `&&`
+
+`&&` means **AND**.
+
+Both conditions must be true.
+
+### 🌍 Real-Life Example
+
+To enter an exam:
+
+```text
+Registered = Yes
+AND
+Attendance >= 75%
+```
+
+Both must be true.
+
+### 💻 Program
+
+```java
+boolean registered = true;
+int attendance = 80;
+
+if (registered && attendance >= 75) {
+    System.out.println("Allowed for exam.");
+}
+```
+
+### 🧠 How it works
+
+```text
+registered          → true
+attendance >= 75    → true
+
+true && true
+     ↓
+    true
+     ↓
+Allowed for exam.
+```
+
+---
+
+# 🔗 13. CONDITIONS WITH `||`
+
+`||` means **OR**.
+
+At least one condition must be true.
+
+### 🌍 Real-Life Example
+
+Suppose a student can get a discount if:
+
+```text
+Marks >= 90
+OR
+Student has a scholarship
+```
+
+### 💻 Program
+
+```java
+int marks = 92;
+boolean scholarship = false;
+
+if (marks >= 90 || scholarship) {
+    System.out.println("Discount available.");
+}
+```
+
+### 🧠 How it works
+
+```text
+marks >= 90       → true
+scholarship       → false
+
+true || false
+     ↓
+    true
+     ↓
+Discount available.
+```
+
+---
+
+# 🔗 14. `!` NOT OPERATOR
+
+`!` reverses a boolean value.
+
+```text
+true  → false
+false → true
+```
+
+### 🌍 Real-Life Example
+
+If it is **not raining**, you can go outside.
+
+### 💻 Program
+
+```java
+boolean raining = false;
+
+if (!raining) {
+    System.out.println("You can go outside.");
+}
+```
+
+### 🧠 How it works
+
+```text
+raining = false
+
+!false
+  ↓
+ true
+  ↓
+You can go outside.
+```
+
+---
+
+# 🧪 15. SMALL PRACTICE PROGRAM — POSITIVE, NEGATIVE OR ZERO
+
+```java
+int number = -5;
+
+if (number > 0) {
+    System.out.println("Positive");
+} else if (number < 0) {
+    System.out.println("Negative");
+} else {
+    System.out.println("Zero");
 }
 ```
 
 ### Output
 
 ```text
-Tuesday
+Negative
 ```
 
-### Explanation
-
-* `day = 2`
-* `switch` compares the value with each `case`.
-* `case 1` → No match.
-* `case 2` → Match found.
-* Therefore, `Tuesday` is printed.
-* `break` stops the switch after the matching case.
-
-### Logic
+### How it works
 
 ```text
-day = 2
-   ↓
-case 1 → No
-case 2 → Yes
-   ↓
-Tuesday
-   ↓
-break
+number = -5
+
+-5 > 0 ? → false
+
+-5 < 0 ? → true
+
+      ↓
+  Negative
 ```
 
 ---
 
-# 🟠 11. Ternary Operator
-
-The ternary operator is a short form of `if-else`.
-
-### Syntax
-
-```java
-condition ? trueValue : falseValue;
-```
-
-### Example — Even or Odd
+# 🧪 16. SMALL PRACTICE PROGRAM — EVEN OR ODD
 
 ```java
 int number = 8;
 
-String result = (number % 2 == 0) ? "Even" : "Odd";
-
-System.out.println(result);
+if (number % 2 == 0) {
+    System.out.println("Even");
+} else {
+    System.out.println("Odd");
+}
 ```
 
 ### Output
@@ -548,92 +839,71 @@ System.out.println(result);
 Even
 ```
 
-### Explanation
+### How it works
 
-First, the condition is checked:
-
-```text
-8 % 2 == 0
-```
+The `%` operator gives the remainder.
 
 ```text
 8 % 2 = 0
 ```
 
-So the condition is `true`.
-
-Therefore:
+So:
 
 ```text
-true  → "Even"
-false → "Odd"
-```
-
-`result` stores `"Even"`.
-
-### Logic
-
-```text
-number % 2 == 0 ?
-       ↓
- ┌─────┴─────┐
-True        False
- ↓             ↓
-Even          Odd
+0 == 0
+  ↓
+true
+  ↓
+Even
 ```
 
 ---
 
-# 📊 12. Quick Comparison
+# 📊 17. WHICH ONE SHOULD I USE?
 
-| Statement    | Best Used For              |
-| ------------ | -------------------------- |
-| `if`         | One condition              |
-| `if-else`    | Two choices                |
-| `if-else-if` | Multiple conditions        |
-| Nested `if`  | Condition inside condition |
-| `switch`     | Multiple fixed choices     |
-| Ternary      | Short `if-else`            |
-
----
-
-# 🧪 13. Practice Problems
-
-## Beginner
-
-1. Check positive or negative
-2. Check even or odd
-3. Check zero
-4. Find greater number
-5. Check pass or fail
-6. Check voting eligibility
-
-## Intermediate
-
-7. Greatest of two numbers
-8. Greatest of three numbers
-9. Check leap year
-10. Check divisibility by 5
-11. Check divisibility by 5 and 11
-12. Check vowel or consonant
-13. Check triangle validity
-14. Calculate grade
-15. Calculate electricity bill
-
-## Switch
-
-16. Day of week
-17. Month number
-18. Simple calculator
-19. Menu-based program
-20. Number to word
-
-## Ternary
-
-21. Even or odd
-22. Positive or negative
-23. Greatest of two
-24. Pass or fail
-25. Eligible or not eligible
+| Situation                          | Use         |
+| ---------------------------------- | ----------- |
+| One condition                      | `if`        |
+| Two possible outcomes              | `if-else`   |
+| Multiple conditions                | `else-if`   |
+| Condition inside another condition | Nested `if` |
+| Multiple fixed choices             | `switch`    |
 
 ---
+
+# 🔄 19. HOW CONDITIONAL STATEMENTS WORK
+
+The basic idea is always:
+
+```text
+              START
+                ↓
+         Check the condition
+                ↓
+        ┌───────┴───────┐
+        ↓               ↓
+      TRUE            FALSE
+        ↓               ↓
+   Execute code     Other path
+        ↓               ↓
+        └───────┬───────┘
+                ↓
+             Continue
+```
+
+# 🚀 CO1.5 COMPLETED
+
+```text
+Conditional Statements
+        │
+        ├── if
+        ├── if-else
+        ├── else-if
+        ├── Nested if
+        ├── switch
+        ├── break
+        ├── default
+        └── Logical Conditions
+```
+
+> **Next → Loops**
